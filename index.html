@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAS CATALOGUE</title>
+  <!-- 引入 Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- 引入 Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    /* 自定义样式 */
+    body {
+      padding-top: 0px; /* 为固定导航栏留出空间 */
+      background-color: #c7cadb;
+    }
+    * {
+      text-decoration: none;
+    }
+    .sticky-nav {
+      position: fixed; /* 固定定位 */
+      top: 10px; /* 距离顶部的距离 */
+      right: 10px; /* 距离右侧的距离 */
+      background-color: #c7cadb;
+      padding: 10px;
+      z-index: 1000;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: top 0.3s; /* 平滑过渡效果 */
+    }
+    .product-section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .product-section h2 {
+      margin-bottom: 20px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 自适应网格布局 */
+      gap: 20px; /* 网格间距 */
+    }
+    .product-item {
+      text-align: center;
+    }
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer; /* 鼠标停时显示手型 */
+    }
+    .nav-link {
+      margin-top: 10px; /* 为每个产品名称添加上边距 */
+      margin-bottom: 10px; /* 为每个产品名称添加下边距 */
+      padding: 15px 0; /* 增加链接的内边距 */
+      display: block; /* 使链接独占一行 */
+      border-radius: 10px;
+      font-size: larger;
+    }
+    .logo {
+      height: auto;
+      display: block;
+      margin: 20px auto; /* 水平居中 */
+    }
+    p {
+      margin-top: 5px;
+    }
+    /* 媒体查询：小屏幕设备 */
+    @media (min-width: 769px) {
+      .sticky-nav {
+        top: 150px; /* 在大屏幕上调整导航栏位置 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Logo -->
+<img src="Img/logo.gif" alt="Company Logo" class="logo">
+
+<!-- 可收回的锚点导航 -->
+<div class="sticky-nav">
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-expanded="false" aria-controls="navCollapse">
+    Navi
+  </button>
+  <div class="collapse" id="navCollapse">
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link" href="#product1">Metal zipper</a>
+      <a class="nav-link" href="#product2">Nylon zipper</a>
+      <a class="nav-link" href="#product3">Plastic zipper</a>
+      <a class="nav-link" href="#product4">Slider</a>
+    </nav>
+  </div>
+</div>
+
+<!-- 产品部分 -->
+<div class="container mt-5">
+  <!-- 产品 1 -->
+  <div id="product1" class="product-section">
+    <h2>Metal zipper</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <a href="Img/metal.png" data-lightbox="product1" data-title="Metal zipper 1">
+          <img src="Img/metal.png" alt="Metal zipper 1" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Metal zipper 1</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/metal2.png" data-lightbox="product1" data-title="Metal zipper 2">
+          <img src="Img/metal2.png" alt="Metal zipper 2" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Metal zipper 2</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/metal3.png" data-lightbox="product1" data-title="Metal zipper 3">
+          <img src="Img/metal3.png" alt="Metal zipper 3" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Metal zipper 3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品 2 -->
+  <div id="product2" class="product-section">
+    <h2>Nylon zipper</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <a href="Img/nylon4.png" data-lightbox="product2" data-title="Nylon zipper 1">
+          <img src="Img/nylon4.png" alt="Nylon zipper 1" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Nylon zipper 1</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/nylon2.png" data-lightbox="product2" data-title="Nylon zipper 2">
+          <img src="Img/nylon2.png" alt="Nylon zipper 2" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Nylon zipper 2</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/nylon3.png" data-lightbox="product2" data-title="Nylon zipper 3">
+          <img src="Img/nylon3.png" alt="Nylon zipper 3" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Nylon zipper 3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品 3 -->
+  <div id="product3" class="product-section">
+    <h2>Plastic zipper</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <a href="Img/plastic2.png" data-lightbox="product3" data-title="Plastic zipper 1">
+          <img src="Img/plastic2.png" alt="Plastic zipper 1" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Plastic zipper 1</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/plastic3.png" data-lightbox="product3" data-title="Plastic zipper 2">
+          <img src="Img/plastic3.png" alt="Plastic zipper 2" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Plastic zipper 2</p>
+      </div>
+      <div class="product-item">
+        <a href="Img/plastic4.png" data-lightbox="product3" data-title="Plastic zipper 3">
+          <img src="Img/plastic4.png" alt="Plastic zipper 3" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Plastic zipper 3</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品 4 -->
+  <div id="product4" class="product-section">
+    <h2>Slider</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <a href="Img/slider.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider.png" alt="Slider 1" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 1</p>
+      </div>
+           <div class="product-item">
+        <a href="Img/slider2.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider2.png" alt="Slider 2" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 2</p>
+      </div>
+           <div class="product-item">
+        <a href="Img/slider3.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider3.png" alt="Slider 3" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 3</p>
+      </div>
+           <div class="product-item">
+        <a href="Img/slider4.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider4.png" alt="Slider 4" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 4</p>
+      </div>
+                 <div class="product-item">
+        <a href="Img/slider5.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider5.png" alt="Slider 5" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 5</p>
+      </div>
+                 <div class="product-item">
+        <a href="Img/slider6.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider6.png" alt="Slider 6" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 6</p>
+      </div>
+                 <div class="product-item">
+        <a href="Img/slider7.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider7.png" alt="Slider 7" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 7</p>
+      </div>
+                 <div class="product-item">
+        <a href="Img/slider8.png" data-lightbox="product4" data-title="Slider 1">
+          <img src="Img/slider8.png" alt="Slider 8" class="img-fluid" style="height: 300px !important;">
+        </a>
+        <p>Slider 8</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 引入 Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 引入 Lightbox JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  // 初始化 Lightbox
+  document.addEventListener
+
+
+
+
+
+
+
+
+
+
+
+
